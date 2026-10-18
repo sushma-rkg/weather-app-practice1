@@ -1,8 +1,74 @@
+:root {
+  --page: #f6f3ea;
+  --green: #6b8f71;
+  --green-dark: #2f4a37;
+  --line: #dcd6c4;
+  --text: #3b4a3f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: sans-serif;
+  justify-content: center;
+  padding: 40px 20px;
+  background: var(--page);
+  color: var(--text);
+  font-family: ui-rounded, "Nunito", "Quicksand", "Varela Round", "Arial Rounded MT Bold", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 30px;
+  color: var(--green-dark);
+}
+
+.tagline {
+  margin: 0 0 24px;
+  text-align: center;
+  color: #7d8a7f;
+}
+
+input {
+  width: 100%;
+  padding: 14px 18px;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #a7ad9f;
+}
+
+input:focus {
+  border-color: var(--green);
+}
+
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 18px;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--green);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
 }
