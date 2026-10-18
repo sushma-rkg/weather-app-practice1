@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup 3 - Meadow Split</title>
+  <style>
+    :root {
+      --page: #f6f3ea;
+      --panel: #fbf9f3;
+      --green: #6b8f71;
+      --green-dark: #2f4a37;
+      --green-soft: #e3ecdf;
+      --line: #dcd6c4;
+      --text: #3b4a3f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: ui-rounded, "Nunito", "Quicksand", "Varela Round", "Arial Rounded MT Bold", system-ui, sans-serif;
+      line-height: 1.5;
+    }
+    .mockup-title {
+      text-align: center;
+      padding: 24px 16px 8px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .view { max-width: 1000px; margin: 24px auto; padding: 0 16px; }
+    .view-label { font-size: 13px; color: #8a8f80; margin: 0 0 8px 4px; }
+    .screen {
+      background: var(--panel);
+      border: 1px dashed var(--line);
+      border-radius: 24px;
+      padding: 28px 20px;
+    }
+
+    /* The app itself: two halves on a laptop, stacked on a phone */
+    .app { display: grid; gap: 24px; }
+    .left { padding: 8px 4px; }
+    .right { display: flex; align-items: center; justify-content: center; }
+    h1 { margin: 0 0 6px; font-size: 30px; color: var(--green-dark); }
+    .tagline { margin: 0 0 24px; color: #7d8a7f; }
+    input {
+      width: 100%;
+      padding: 14px 18px;
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 16px;
+      outline: none;
+    }
+    input::placeholder { color: #a7ad9f; }
+    button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 14px 18px;
+      font: inherit;
+      font-weight: 700;
+      color: #fff;
+      background: var(--green);
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+    .card {
+      width: 100%;
+      padding: 32px 24px;
+      text-align: center;
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 6px 24px rgba(47, 74, 55, 0.08);
+    }
+    .city { margin: 0; font-size: 22px; font-weight: 700; color: var(--green-dark); }
+    .icon { font-size: 64px; margin: 8px 0 0; }
+    .temp { margin: 0; font-size: 60px; font-weight: 700; color: var(--green-dark); }
+    .desc { margin: 0 0 20px; font-size: 18px; color: #6f7c72; }
+    .details {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 18px;
+      border-top: 1px solid var(--green-soft);
+    }
+    .details span { display: block; font-size: 13px; color: #8a9488; }
+    .details strong { font-size: 18px; color: var(--green-dark); }
+    .hint {
+      width: 100%;
+      padding: 40px 24px;
+      text-align: center;
+      color: #8a9488;
+      background: var(--green-soft);
+      border-radius: 28px;
+    }
+    .hint .icon { font-size: 40px; margin: 0 0 4px; }
+    .loading { text-align: center; font-size: 20px; color: var(--green); }
+    .not-found {
+      margin-top: 16px;
+      padding: 14px 18px;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border-radius: 16px;
+    }
+
+    /* Laptop: search on the left, weather on the right */
+    @media (min-width: 800px) {
+      .screen { padding: 48px 40px; }
+      .app { grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mockup-title">Mockup 3 &middot; Meadow Split</div>
+
+  <section class="view">
+    <p class="view-label">View 1: Before searching</p>
+    <div class="screen">
+      <div class="app">
+        <div class="left">
+          <h1>Weather App</h1>
+          <p class="tagline">See the weather in any city</p>
+          <input type="text" placeholder="Type a city name" aria-label="City name">
+          <button type="button">Search</button>
+        </div>
+        <div class="right">
+          <div class="hint"><p class="icon">🌿</p>Type a city to begin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view">
+    <p class="view-label">View 2: Loading</p>
+    <div class="screen">
+      <div class="app">
+        <div class="left">
+          <h1>Weather App</h1>
+          <p class="tagline">See the weather in any city</p>
+          <input type="text" value="Willowbrook" aria-label="City name">
+          <button type="button">Search</button>
+        </div>
+        <div class="right">
+          <p class="loading">Loading...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view">
+    <p class="view-label">View 3: Weather result</p>
+    <div class="screen">
+      <div class="app">
+        <div class="left">
+          <h1>Weather App</h1>
+          <p class="tagline">See the weather in any city</p>
+          <input type="text" value="Willowbrook" aria-label="City name">
+          <button type="button">Search</button>
+        </div>
+        <div class="right">
+          <div class="card">
+            <p class="city">Willowbrook, Greenfield</p>
+            <p class="icon">⛅</p>
+            <p class="temp">24°C</p>
+            <p class="desc">Partly cloudy</p>
+            <div class="details">
+              <div><span>Humidity</span><strong>58%</strong></div>
+              <div><span>Wind</span><strong>12 km/h</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view">
+    <p class="view-label">View 4: City not found</p>
+    <div class="screen">
+      <div class="app">
+        <div class="left">
+          <h1>Weather App</h1>
+          <p class="tagline">See the weather in any city</p>
+          <input type="text" value="Zzzzxq" aria-label="City name">
+          <button type="button">Search</button>
+          <p class="not-found">We couldn't find that city. Please check the spelling and try again.</p>
+        </div>
+        <div class="right">
+          <div class="hint"><p class="icon">🌿</p>Type a city to begin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

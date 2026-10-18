@@ -7,7 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Weather App</h1>
+  <main class="app">
+    <h1>Weather App</h1>
+    <p class="tagline">See the weather in any city</p>
+    <form id="search-form">
+      <input type="text" id="city-input" placeholder="Type a city name" aria-label="City name">
+      <button type="submit">Search</button>
+    </form>
+    <div id="result" aria-live="polite"></div>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
